@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #b72a67;
+}
+.navigation {
+    z-index: 1;
+    position: relative;
+    padding: 20px;
+    width: 20vw;;
+    height: 96.4vh;
+    background-color: #8d2050;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateX(-22vw);
+    transition: all 1s ease-in-out;
+}
+.hamburger {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.bar {
+    height: 5px;
+    width: 50px;
+    background-color: white;
+    margin: 10px auto;
+    box-shadow:0px 5px 50px  5px gray;
+
+}
+.hamburger .bottom {
+    transition-duration: 0.5s;
+}
+.hamburger .top {
+    transition-duration: 0.5s;
+}
+.checkfirst:checked ~ .hamburger .top {
+    transform: translateY(15px) rotateZ(45deg)
+}
+.checkfirst:checked ~ .hamburger .middle {
+    width: 0px;
+}
+.checkfirst:checked ~ .hamburger .bottom {
+    transform: translateY(-15px) rotateZ(-45deg)
+}
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    margin: 50px;
+}
+.menu-item {
+    color : #fff;
+    font-size : 20px;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    margin: 20px 30px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer
+}
+.check {
+    z-index: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 1  ;
+    width: 50px;
+    height: 50px;
+}
+
+.check:hover {
+    padding: 10px;
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    left: 600px;
+    display: grid;
+    grid-template-columns: 576px 384px 384px;
+    grid-template-rows: 324px 216px 216px ;
+    grid-template-areas: 
+    "picone picone pictwo"
+    "picthree picfour pictwo"
+    "picfive picfive picsix ";
+    width: 1344px;
+    height: 756px;
+    padding: 10px;
+    grid-gap: 10px;
+}
+.picone {
+    grid-area: picone;
+    background:#b72a67;
+}
+.pictwo {
+    grid-area: pictwo;
+    background:#b72a67;
+}
+.picthree {
+    grid-area: picthree;
+    background:#b72a67;
+
+}
+.picfour {
+    grid-area: picfour;
+    background:#b72a67;
+
+}
+.picfive {
+    grid-area: picfive;
+    background:#b72a67;
+
+}
+.picsix {
+    grid-area: picsix;
+    background:#b72a67;
+
+}
+.picone:hover {
+    z-index: 1;
+    width: 960px;
+    height: 324px;
+    box-shadow: 4px 3px 0px #f69ec5;
+}
+.pictwo:hover {
+    z-index: 1;
+    width: 384px;
+    height: 540px;
+    box-shadow: 4px 4px 0px #0d2879;
+}
+.picthree:hover {
+    z-index: 1;
+    width: 576px;
+    height: 216px;
+    box-shadow: 4px 3px 0px #181742;
+}
+.picfour:hover {
+    z-index: 1;
+    width: 384px;
+    height: 216px;
+    box-shadow: 4px 3px 0px #ad8a80;
+}
+.picfive:hover {
+    z-index: 1;
+    width: 960px;
+    height: 216px;
+    box-shadow: 4px 3px 0px #170a5c;
+}
+.picsix:hover {
+    z-index: 1;
+    width: 384px;
+    height: 216px;
+    box-shadow: 4px 3px 0px #3667b3;
+}
+.checkfirst  {
+    z-index: 10;
+    position: absolute;
+    left: 1px;
+    top: 2px;
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+}
+.checkfirst:checked ~ .navigation {
+    animation: 1s ease-in-out navigate;
+    transform: translateX(0px);
+}
+.circle {
+    position: absolute;
+    display: flex;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid lightgray;
+    opacity: 1;
+    width: 0px;
+    height: 0px;
+    border-radius: 50% 50% 50% 50%;
+}
+.doublecircle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 3px solid black;
+    width: 0px;
+    height: 0px;
+    border-radius: 50% 50% 50% 50%;
+}
+.staycircle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 3px solid transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50% 50% 50%;
+}
+.circle:hover {
+    transition-duration: 0.8s;
+    width: 50px;
+    height: 50px;
+}
+.doublecircle:hover {
+    transition-duration: 0.8s;
+    width: 30px;
+    height: 30px;
+}
+.text {
+    font-size: 25px;
+    color: white;
+}
+.hamburger1 {
+    top: 100px;
+    z-index: 1;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 10px;
+    transform: translateX(-150px);
+
+}
+.hamburger3 {
+    z-index: 1;
+    top: 300px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 10px;
+    transform: translateX(-150px);
+
+}
+.hamburger4 {
+    z-index: 1;
+    top: 400px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 10px;
+    transform: translateX(-150px);
+
+}
+.hamburger2 {
+    z-index: 1;
+    top: 200px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin: 10px;
+    transform: translateX(-150px);
+
+}
+.checkfirst:checked ~ .hamburger1 {
+    animation: 1s  hambuga1;
+    display: block;
+    transform: translateX(100px);
+}
+@keyframes hambuga1 {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(100px);
+    }
+}
+.checkfirst:checked ~ .hamburger2 {
+    animation: 1s  hambuga2;
+    display: block;
+    transform: translateX(100px);
+}
+@keyframes hambuga2 {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(100px);
+    }
+}
+.checkfirst:checked ~ .hamburger3 {
+    animation: 1s  hambuga3;
+    display: block;
+    transform: translateX(100px);
+}
+@keyframes hambuga3 {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(100px);
+    }
+}
+.checkfirst:checked ~ .hamburger4 {
+    animation: 1s  hambuga4;
+    display: block;
+    transform: translateX(100px);
+}
+@keyframes hambuga4 {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(100px);
+    }
+}
